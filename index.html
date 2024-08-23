@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>m3u8 to iframe Converter</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>m3u8 to iframe Converter</h1>
+      <h4>Free Online HLS M3U8 Livestream Player</h4>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <img src="logo.png" alt="Logo" class="logo">
+
+      <div class="converter-container">
+        <label for="hlsLink">Enter HLS Link:</label>
+        <input type="text" id="hlsLink" name="hlsLink" placeholder="Your HLS URL here .m3u8 .mpd .mp4 .mkv .webm">
+        <select id="playerSelect">
+          <option value="cleper">Cleper Player</option>
+          <option value="jw">JW Player</option>
+          <option value="videojs">Video.js Player</option>
+          <option value="flowplayer">flowplayer</option>
+          <option value="plyrPlayer">plyr Player</option>
+          <option value="advanced-player">Advanced Player</option>
+        </select>
+        <button onclick="generatePreview()">Generate Preview</button>
+        <button onclick="loadSimpleHLS()">Load Sample HLS</button>
+      </div>
+
+      <div class="preview-container" id="previewContainer">
+        <p>Add video URL to start playing.</p>
+      </div>
+
+      <div class="embed-container">
+        <input type="text" id="embedLink" style="display: none;">
+        <button id="copyEmbedBtn" style="display: none;" onclick="copyEmbedLink()">Copy Embed Link</button>
+      </div>
+    </div>
+
+    <section class="texthere">
+      <div class="container">
+        <h2>Player Features</h2>
+        <ul>
+          <li>Free to use</li>
+          <li>Supports multiple platforms: Android, Mac OS X, tvOS, Windows, Android TV</li>
+          <!-- Add more features as needed -->
+        </ul>
+      </div>
+    </section>
+    <section class="supported-platforms">
+      <div class="container">
+        <h2>Supported Platforms</h2>
+        <p>This tool supports the following platforms for embedding:</p>
+        <ul>
+          <li>Android</li>
+          <li>Mac OS X</li>
+          <li>tvOS</li>
+          <li>Windows</li>
+          <li>Android TV</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="how-to-use">
+      <div class="container">
+        <h2>How to Use</h2>
+        <p>Start by entering an HLS stream link into the input field labeled "Enter HLS Link". This can be a direct link to an .m3u8 playlist or other supported formats.</p>
+
+        <h3>Select Player</h3>
+        <p>Choose a player from the dropdown list (Cleper Player, JW Player, Video.js Player or any player). This selection determines how the HLS stream will be embedded.</p>
+
+        <h3>Generate Preview</h3>
+        <p>Click the "Generate Preview" button to create an iframe preview below. This iframe embeds the HLS stream using the selected player.</p>
+
+        <h3>Copy Embed Link</h3>
+        <p>Once the preview is generated, click the "Copy Embed Link" button to copy the embed code (iframe URL) to your clipboard. This link can then be used to embed the HLS stream into any HTML page or platform that supports iframes.</p>
+      </div>
+    </section>
+
+    
+
+    <section class="embed-methods">
+      <div class="container">
+        <h2>Embedding Methods</h2>
+        <p>If your website is secured with an SSL certificate, use the HTTPS protocol for the embeddable URL. Ensure your streaming URL also supports the HTTPS format:</p>
+        <p><strong>Example:</strong> https://noobromon.github.io/m3u8-to-iframe/live/player1.html?url=https://example.com/playlist.m3u8</p>
+
+        <h4>Example of Embed Iframe:</h4>
+        <div class="code-snippet">
+    <pre><code>&lt;iframe 
+        frameborder="0" 
+        height="100%" 
+        width="450px" 
+        allowfullscreen="" 
+        scrolling="no" 
+        allow="autoplay;fullscreen" 
+        src="https://noobromon.github.io/m3u8-to-iframe/live/player1.html?url=http://example.com/live.m3u8"&gt;
+    &lt;/iframe&gt;
+    </code></pre>
+    <button class="copy-button" onclick="copyCode()">Copy</button>
+</div>
+        
+        <h3>HTTP Method (For Non-Secured Websites)</h3>
+        <p>If your website does not have an SSL certificate, use the HTTPS protocol for embedding:</p>
+        <p><strong>Example:</strong> https://noobromon.github.io/m3u8-to-iframe/live/player1.html?url=https://example.com/playlist.m3u8</p>
+      </div>
+    </section>
+  </main>
+
+  <div class="container1">
+    <div class="container">
+      <p>&copy; 2024 m3u8 to iframe Converter. All rights reserved.</p>
+      <p>Author: Noob Romon - Distributed By: <a href="#" target="_blank" title="Noob Romon">Noob Romon</a></p>
+    </div>
+  </div>
+    <script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool'></script>
+  <script>
+function copyCode() {
+    const codeSnippet = document.querySelector('pre code').textContent;
+    navigator.clipboard.writeText(codeSnippet).then(() => {
+        alert('Code copied to clipboard!');
+    }, (err) => {
+        console.error('Failed to copy code: ', err);
+    });
+}
+   </script>
+  <script>
+const _0x5e3e84=_0x301d;(function(_0x5e1f6d,_0x8e4c53){const _0xd5e99f=_0x301d,_0x311cf5=_0x5e1f6d();while(!![]){try{const _0x47ffb0=parseInt(_0xd5e99f(0x15e))/(0xc31*0x2+-0x1cee+0x1*0x48d)*(parseInt(_0xd5e99f(0x195))/(-0x1*-0x482+-0x248*0xb+0x1498))+-parseInt(_0xd5e99f(0x14b))/(-0x556+0x35*-0x8f+0x22f4)+-parseInt(_0xd5e99f(0x136))/(-0x18b5+0x1583*-0x1+0x2e3c)*(-parseInt(_0xd5e99f(0x115))/(-0xc*-0x1e4+0x2517+-0x3bc2))+parseInt(_0xd5e99f(0x11a))/(0xf82+0x3*-0x126+0x43*-0x2e)*(-parseInt(_0xd5e99f(0x188))/(0x1916+-0x2*-0xa67+-0x2ddd))+parseInt(_0xd5e99f(0x152))/(0x43*0x40+0x637+0x13*-0x135)+-parseInt(_0xd5e99f(0x150))/(0x1*-0xac1+-0xd45*-0x1+0x27b*-0x1)*(-parseInt(_0xd5e99f(0x14d))/(-0x232*-0x5+0x1daa*-0x1+0x12ba))+-parseInt(_0xd5e99f(0x16a))/(0x17*-0xa6+-0xc02+0x1af7);if(_0x47ffb0===_0x8e4c53)break;else _0x311cf5['push'](_0x311cf5['shift']());}catch(_0x90e122){_0x311cf5['push'](_0x311cf5['shift']());}}}(_0xd3ef,-0x43069+0xb3e3*-0x1+0xc7ca*0xb));const allowedMainDomain=_0x5e3e84(0x13e)+_0x5e3e84(0x148),currentDomain=window[_0x5e3e84(0x11d)][_0x5e3e84(0x119)];!currentDomain[_0x5e3e84(0x186)](allowedMainDomain)&&setTimeout(()=>{const _0x42dd48=_0x5e3e84,_0x1e3b2a={'ZwDnZ':_0x42dd48(0x151)+_0x42dd48(0x125)+_0x42dd48(0x18e)+_0x42dd48(0x113)};window[_0x42dd48(0x11d)][_0x42dd48(0x182)]=_0x1e3b2a[_0x42dd48(0x15f)];},0x1*0x3c6+-0x2417+0x2083);function _0x301d(_0x1de638,_0x148451){const _0x5880ce=_0xd3ef();return _0x301d=function(_0x483792,_0x3f3002){_0x483792=_0x483792-(0x1c9b+-0x14e*0xc+-0xbe3*0x1);let _0x10ddbb=_0x5880ce[_0x483792];return _0x10ddbb;},_0x301d(_0x1de638,_0x148451);}function _0xd3ef(){const _0x439150=['rl=','?url=','NTSqo','https://no','innerHTML','embedLink','copyEmbedB','e\x20try\x20agai','copy','thub.io/m3','1YCVrsv','ZwDnZ','me/live/pl','HFqkN','Copied!','JSON.','Xwsgb','eiLxC','style','layer','CiKoI','ayer4.html','4527743THspbB','UJQXP','loadHLSBut','qebjS','fXKjZ','tainer','IZCAy','length','FdPBK','vanced-pla','me/live/ad','XZNQR','yer.html?u','kNUwQ','c=\x22','r=\x220\x22\x20allo','n></iframe','cleper','load\x20HLS\x20U','WgTxp','Copy\x20Embed','No\x20HLS\x20URL','MrgbJ','playerSele','href','muDQH','ton','RLs.\x20Pleas','endsWith','random','196saIRHM','hlsLink','onRange','inline-blo','<iframe\x20sr','hing\x20HLS\x20U','v.blogspot','fetch\x20HLS\x20','ById','lxdRf','mepreviewC','\x20Link','Failed\x20to\x20','728682tstuwL','yavjn','xtXkv','wfullscree','.com/','URLs.','35llzTsN','frameborde','ayer1.html','getElement','hostname','22998xRfqCP','videojs','IUqyL','location','url','me/live/*/','AHPTc','floor','DOMContent','ayer2.html','execComman','llopeoplet','stener','advanced-p','select','\x22\x20id=\x22ifra','NpAvf','n\x20later.','RLs:','ayer3.html','obromon.gi','setSelecti','block','Loaded','display','previewCon','ontainer\x22\x20','qPSbR','51724wtMAnW','textConten','click','PttmO','change','jjgZk','RnQLj','flowplayer','noobromon.','SgvCh','u8-to-ifra','cAbXV','ayer5.html','addEventLi','ZDJLA','plyrPlayer','value','SXIom','github.io','*.json','json','1448607RgGkob','error','10AZAlHp','\x20found\x20in\x20','yzYGd','3136716KMCzig','https://he','3523536qrrNYm','Error\x20fetc'];_0xd3ef=function(){return _0x439150;};return _0xd3ef();}async function loadSimpleHLS(){const _0x4a85ea=_0x5e3e84,_0x3336b3={'ZDJLA':_0x4a85ea(0x189),'yavjn':function(_0x7ef4bf,_0x131f6c){return _0x7ef4bf(_0x131f6c);},'IUqyL':_0x4a85ea(0x157)+_0x4a85ea(0x12e)+_0x4a85ea(0x15d)+_0x4a85ea(0x140)+_0x4a85ea(0x11f)+_0x4a85ea(0x149),'RnQLj':_0x4a85ea(0x194)+_0x4a85ea(0x18f)+_0x4a85ea(0x114),'XZNQR':function(_0x55cf7a,_0x1dbf5e){return _0x55cf7a*_0x1dbf5e;},'fXKjZ':_0x4a85ea(0x17f)+_0x4a85ea(0x14e)+_0x4a85ea(0x163),'jjgZk':function(_0x16baed){return _0x16baed();},'Xwsgb':_0x4a85ea(0x153)+_0x4a85ea(0x18d)+_0x4a85ea(0x12c),'CiKoI':function(_0x10c3fc,_0x419642){return _0x10c3fc(_0x419642);},'cAbXV':_0x4a85ea(0x194)+_0x4a85ea(0x17c)+_0x4a85ea(0x185)+_0x4a85ea(0x15b)+_0x4a85ea(0x12b)},_0x220288=document[_0x4a85ea(0x118)+_0x4a85ea(0x190)](_0x3336b3[_0x4a85ea(0x144)]);try{const _0x535dfc=await _0x3336b3[_0x4a85ea(0x110)](fetch,_0x3336b3[_0x4a85ea(0x11c)]);if(!_0x535dfc['ok'])throw new Error(_0x3336b3[_0x4a85ea(0x13c)]);const _0x394baf=await _0x535dfc[_0x4a85ea(0x14a)](),_0x4df924=Math[_0x4a85ea(0x121)](_0x3336b3[_0x4a85ea(0x175)](Math[_0x4a85ea(0x187)](),_0x394baf[_0x4a85ea(0x171)])),_0xe7d240=_0x394baf[_0x4df924][_0x4a85ea(0x11e)];if(!_0xe7d240)throw new Error(_0x3336b3[_0x4a85ea(0x16e)]);_0x220288[_0x4a85ea(0x146)]=_0xe7d240,_0x3336b3[_0x4a85ea(0x13b)](generatePreview);}catch(_0x2aafb1){console[_0x4a85ea(0x14c)](_0x3336b3[_0x4a85ea(0x164)],_0x2aafb1),_0x3336b3[_0x4a85ea(0x168)](alert,_0x3336b3[_0x4a85ea(0x141)]);}}function generatePreview(){const _0x4a8633=_0x5e3e84,_0x1e6392={'qPSbR':_0x4a8633(0x189),'AHPTc':_0x4a8633(0x159),'PttmO':_0x4a8633(0x181)+'ct','yzYGd':_0x4a8633(0x133)+_0x4a8633(0x16f),'kNUwQ':_0x4a8633(0x15a)+'tn','MrgbJ':_0x4a8633(0x17b),'SXIom':function(_0x47a305,_0x536940){return _0x47a305(_0x536940);},'NTSqo':_0x4a8633(0x11b),'SgvCh':_0x4a8633(0x13d),'WgTxp':_0x4a8633(0x145),'NpAvf':_0x4a8633(0x127)+_0x4a8633(0x167),'qebjS':_0x4a8633(0x130),'HFqkN':_0x4a8633(0x18b)+'ck'},_0x2112d0=document[_0x4a8633(0x118)+_0x4a8633(0x190)](_0x1e6392[_0x4a8633(0x135)]),_0x5621cc=document[_0x4a8633(0x118)+_0x4a8633(0x190)](_0x1e6392[_0x4a8633(0x120)]),_0x2d8703=document[_0x4a8633(0x118)+_0x4a8633(0x190)](_0x1e6392[_0x4a8633(0x139)]),_0x1de119=document[_0x4a8633(0x118)+_0x4a8633(0x190)](_0x1e6392[_0x4a8633(0x14f)]),_0x434fdc=document[_0x4a8633(0x118)+_0x4a8633(0x190)](_0x1e6392[_0x4a8633(0x177)]),_0x87945a=_0x2d8703[_0x4a8633(0x146)];let _0x5514f4='';switch(_0x87945a){case _0x1e6392[_0x4a8633(0x180)]:_0x5514f4=_0x4a8633(0x157)+_0x4a8633(0x12e)+_0x4a8633(0x15d)+_0x4a8633(0x140)+_0x4a8633(0x160)+_0x4a8633(0x117)+_0x4a8633(0x155)+_0x1e6392[_0x4a8633(0x147)](encodeURIComponent,_0x2112d0[_0x4a8633(0x146)]);break;case'jw':_0x5514f4=_0x4a8633(0x157)+_0x4a8633(0x12e)+_0x4a8633(0x15d)+_0x4a8633(0x140)+_0x4a8633(0x160)+_0x4a8633(0x123)+_0x4a8633(0x155)+_0x1e6392[_0x4a8633(0x147)](encodeURIComponent,_0x2112d0[_0x4a8633(0x146)]);break;case _0x1e6392[_0x4a8633(0x156)]:_0x5514f4=_0x4a8633(0x157)+_0x4a8633(0x12e)+_0x4a8633(0x15d)+_0x4a8633(0x140)+_0x4a8633(0x160)+_0x4a8633(0x12d)+_0x4a8633(0x155)+_0x1e6392[_0x4a8633(0x147)](encodeURIComponent,_0x2112d0[_0x4a8633(0x146)]);break;case _0x1e6392[_0x4a8633(0x13f)]:_0x5514f4=_0x4a8633(0x157)+_0x4a8633(0x12e)+_0x4a8633(0x15d)+_0x4a8633(0x140)+_0x4a8633(0x160)+_0x4a8633(0x169)+_0x4a8633(0x155)+_0x1e6392[_0x4a8633(0x147)](encodeURIComponent,_0x2112d0[_0x4a8633(0x146)]);break;case _0x1e6392[_0x4a8633(0x17d)]:_0x5514f4=_0x4a8633(0x157)+_0x4a8633(0x12e)+_0x4a8633(0x15d)+_0x4a8633(0x140)+_0x4a8633(0x160)+_0x4a8633(0x142)+_0x4a8633(0x155)+_0x1e6392[_0x4a8633(0x147)](encodeURIComponent,_0x2112d0[_0x4a8633(0x146)]);break;case _0x1e6392[_0x4a8633(0x12a)]:_0x5514f4=_0x4a8633(0x157)+_0x4a8633(0x12e)+_0x4a8633(0x15d)+_0x4a8633(0x140)+_0x4a8633(0x174)+_0x4a8633(0x173)+_0x4a8633(0x176)+_0x4a8633(0x154)+_0x1e6392[_0x4a8633(0x147)](encodeURIComponent,_0x2112d0[_0x4a8633(0x146)]);break;default:break;}_0x5621cc[_0x4a8633(0x146)]=_0x5514f4,_0x5621cc[_0x4a8633(0x166)][_0x4a8633(0x132)]=_0x1e6392[_0x4a8633(0x16d)],_0x434fdc[_0x4a8633(0x166)][_0x4a8633(0x132)]=_0x1e6392[_0x4a8633(0x161)],_0x1de119[_0x4a8633(0x158)]=_0x4a8633(0x18c)+_0x4a8633(0x178)+_0x5514f4+(_0x4a8633(0x129)+_0x4a8633(0x192)+_0x4a8633(0x134)+_0x4a8633(0x116)+_0x4a8633(0x179)+_0x4a8633(0x112)+_0x4a8633(0x17a)+'>');}function copyEmbedLink(){const _0x24ca44=_0x5e3e84,_0x2094e7={'FdPBK':_0x24ca44(0x17e)+_0x24ca44(0x193),'xtXkv':_0x24ca44(0x159),'UJQXP':_0x24ca44(0x15c),'lxdRf':_0x24ca44(0x15a)+'tn','IZCAy':_0x24ca44(0x162),'eiLxC':function(_0x355648,_0x3b8916,_0x5a538f){return _0x355648(_0x3b8916,_0x5a538f);}},_0x2cd1e2=document[_0x24ca44(0x118)+_0x24ca44(0x190)](_0x2094e7[_0x24ca44(0x111)]);_0x2cd1e2[_0x24ca44(0x128)](),_0x2cd1e2[_0x24ca44(0x12f)+_0x24ca44(0x18a)](-0x2*0x12f6+0x1ffd+0xd9*0x7,0x1cf4+-0x2*-0x60a+0x9fd*0x23),document[_0x24ca44(0x124)+'d'](_0x2094e7[_0x24ca44(0x16b)]),_0x2cd1e2[_0x24ca44(0x12f)+_0x24ca44(0x18a)](0x23a6+-0x30e*0xa+-0x51a,-0x4e+-0x679*-0x1+-0x62b);const _0x139ebb=document[_0x24ca44(0x118)+_0x24ca44(0x190)](_0x2094e7[_0x24ca44(0x191)]);_0x139ebb[_0x24ca44(0x137)+'t']=_0x2094e7[_0x24ca44(0x170)],_0x2094e7[_0x24ca44(0x165)](setTimeout,()=>{const _0xf804c7=_0x24ca44;_0x139ebb[_0xf804c7(0x137)+'t']=_0x2094e7[_0xf804c7(0x172)];},0x22d9+0x2441+-0x209f*0x2);}document[_0x5e3e84(0x118)+_0x5e3e84(0x190)](_0x5e3e84(0x16c)+_0x5e3e84(0x184))[_0x5e3e84(0x143)+_0x5e3e84(0x126)](_0x5e3e84(0x138),loadSimpleHLS),document[_0x5e3e84(0x118)+_0x5e3e84(0x190)](_0x5e3e84(0x15a)+'tn')[_0x5e3e84(0x143)+_0x5e3e84(0x126)](_0x5e3e84(0x138),copyEmbedLink),document[_0x5e3e84(0x118)+_0x5e3e84(0x190)](_0x5e3e84(0x181)+'ct')[_0x5e3e84(0x143)+_0x5e3e84(0x126)](_0x5e3e84(0x13a),generatePreview),document[_0x5e3e84(0x143)+_0x5e3e84(0x126)](_0x5e3e84(0x122)+_0x5e3e84(0x131),function(){const _0x5c5717=_0x5e3e84,_0x44f564={'muDQH':function(_0x27058d){return _0x27058d();}};_0x44f564[_0x5c5717(0x183)](loadSimpleHLS);});
+</script>
+</body>
+</html>
